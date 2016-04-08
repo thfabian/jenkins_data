@@ -1,0 +1,5 @@
+ &POLCTL
+  isp_pollen = 3,
+  lpollenini = .false.,
+  lpollenbd = .false.,
+ /

@@ -1,0 +1,920 @@
+  
+0     The NAMELIST variables were specified as follows:
+      =================================================
+  
+  
+0     NAMELIST:  lmgrid
+      -----------------
+  
+      Variable                  Actual Value      Default Value      Format
+       pollon                      -170.0000          -170.0000        R 
+       pollat                        43.0000            32.5000        R 
+       polgam                         0.0000             0.0000        R 
+       dlon                           0.0200             0.0080        R 
+       dlat                           0.0200             0.0080        R 
+       startlon_tot                  -4.0000            -1.2520        R 
+       startlat_tot                  -5.7000            -7.9720        R 
+       ie_tot                             39                 51        I 
+       je_tot                             28                 51        I 
+       ke_tot                             80                 20        I 
+  
+  
+0     NAMELIST:  runctl
+      -----------------
+  
+      Variable                  Actual Value      Default Value      Format
+       hstart                         0.0000             0.0000        R 
+       nstop                               2                  0        I 
+       hstop                          0.0111             0.0000        R 
+       dt                            20.0000            30.0000        R 
+       ydate_ini                  2012012200                          C*10
+       ydate_end                                                      C*10
+       ydate_bd                   2012012200                          C*10
+       itype_calendar                      0                  0        I 
+       hincmxt                        1.0000             6.0000        R 
+       hincmxu                        1.0000             1.0000        R 
+       leps                                F                  F        L 
+       lphys                               T                  T        L 
+       nproma                 16                 16        I 
+       nblock                 -1                 -1        I 
+       lsppt                               F                  F        L 
+       ldiagnos                            F                  T        L 
+       ldfi                                F                  F        L 
+       luseobs                             F                  F        L 
+       luse_rttov                          F                  F        L 
+       l_cosmo_art                         F                  F        L 
+       l_pollen                            F                  F        L 
+       ldump_ascii                         F                  T        L 
+       lreproduce                          T                  T        L 
+       lreorder                            F                  F        L 
+       lartif_data                         T                  F        L 
+       lperi_x                             F                  F        L 
+       lperi_y                             F                  F        L 
+       l2dim                               F                  F        L 
+       lroutine                            F                  F        L 
+       llm                                 F                  F        L 
+       nprocx                              1                  1        I 
+       nprocy                              1                  1        I 
+       nprocio                             0                  0        I 
+       num_asynio_comm                     0                  0        I 
+       num_iope_percomm                    0                  0        I 
+       nboundlines                         3                  2        I 
+       ncomm_type                          1                  1        I 
+       ldatatypes                          F                  F        L 
+       ltime_barrier                       F                  F        L 
+       itype_timing                        1                  4        I 
+       idbg_level                         50                  2        I 
+       ldebug_dyn                          T                  F        L 
+       ldebug_gsp                          T                  F        L 
+       ldebug_rad                          T                  F        L 
+       ldebug_tur                          T                  F        L 
+       ldebug_con                          T                  F        L 
+       ldebug_soi                          T                  F        L 
+       ldebug_io                           T                  F        L 
+       ldebug_mpe                          T                  F        L 
+       ldebug_dia                          T                  F        L 
+       ldebug_art                          T                  F        L 
+       ldebug_ass                          T                  F        L 
+       ldebug_lhn                          T                  F        L 
+       lprintdeb_all                       F                  F        L 
+       linit_fields                        F                  F        L 
+  
+  
+0     NAMELIST:  tuning
+      -----------------
+  
+      Variable                  Actual Value      Default Value      Format
+       crsmin                       150.0000           150.0000        R 
+       rat_lam                        1.0000             1.0000        R 
+       tkesmot                        0.1500             0.1500        R 
+       wichfakt                       0.0000             0.0000        R 
+       securi                         0.5000             0.5000        R 
+       tkhmin                         0.4000             0.4000        R 
+       tkmmin                         0.4000             0.4000        R 
+       rlam_mom                       0.0000             0.0000        R 
+       rlam_heat                      1.0000             1.0000        R 
+       rat_sea                       20.0000            20.0000        R 
+       rat_can                        1.0000             1.0000        R 
+       c_lnd                          2.0000             2.0000        R 
+       c_sea                          1.5000             1.5000        R 
+       c_soil                         1.0000             1.0000        R 
+       e_surf                         1.0000             1.0000        R 
+       pat_len                      500.0000           500.0000        R 
+       tur_len                      150.0000           500.0000        R 
+       z0m_dia                        0.2000             0.2000        R 
+       a_heat                         0.7400             0.7400        R 
+       a_mom                          0.9200             0.9200        R 
+       d_heat                        10.1000            10.1000        R 
+       d_mom                         16.6000            16.6000        R 
+       c_diff                         0.2000             0.2000        R 
+       a_hshr                         0.2000             0.2000        R 
+       a_stab                         0.0000             0.0000        R 
+       clc_diag                       0.5000             0.5000        R 
+       q_crit                         1.6000             4.0000        R 
+       qc0                            0.0002             0.0000        R 
+       qi0                            0.0000             0.0000        R 
+       gkdrag                         0.0750             0.0750        R 
+       gkwake                         0.5000             0.5000        R 
+       mu_rain                        0.5000             0.0000        R 
+       rain_n0_factor                 0.1000             1.0000        R 
+       v0snow                       2.00E+01         2.5000E+01        R 
+       cloud_num                    5.00E+08         5.0000E+08        R 
+       entr_sc                        0.0003             0.0003        R 
+       thick_sc                   25000.0000         25000.0000        R 
+  
+  
+0     NAMELIST:  dynctl
+      -----------------
+  
+      Variable                  Actual Value      Default Value      Format
+       epsass                         0.1500             0.1500        R 
+       alphaass                       1.0000             1.0000        R 
+       betasw                         0.4000             0.4000        R 
+       betagw                         0.4000             0.4000        R 
+       beta2sw                        0.4000             0.4000        R 
+       beta2gw                        0.4000             0.4000        R 
+       lrubc                               F                  F        L 
+       lspubc                              T                  T        L 
+       lexpl_lbc                           T                  T        L 
+       lradlbc                             F                  F        L 
+       lcond                               T                  T        L 
+       ldiabf_lh                           T                  T        L 
+       lw_freeslip                         T                  T        L 
+       l2tls                               T                  T        L 
+       lcpp_dycore                         F                  F        L 
+       y_vert_adv_dyn                  impl2              impl2       C*8
+       lsemi_imp                           F                  F        L 
+       lhordiff                            T                  T        L 
+       ldyn_bbc                            F                  F        L 
+       lcori                               T                  T        L 
+       lmetr                               T                  T        L 
+       lcori_deep                          F                  F        L 
+       ladv_deep                           F                  F        L 
+       y_scalar_advect            BOTT2_STRANG       BOTT2_STRANG     C*8
+       rdheight                   11000.0000         11000.0000        R 
+       crltau                         1.0000             1.0000        R 
+       rlwidth                     5000.0000         85000.0000        R 
+       relax_fac                      0.0100             0.0100        R 
+       nrdtau                              5                  5        I 
+       maxit_si                          200                200        I 
+       ikrylow_si                         20                 20        I 
+       iprint_si                           0                  0        I 
+       irunge_kutta                        1                  1        I 
+       irk_order                           3                  3        I 
+       iadv_order                          5                  3        I 
+       ieva_order                          3                  3        I 
+       itheta_adv                          0                  0        I 
+       ltadv_limiter                       F                  F        L 
+       itype_bbc_w                       114                114        I 
+       intcr_max                           1                  1        I 
+       itype_outflow_qrsg                  2                  1        I 
+       itype_lbc_qrsg                      1                  1        I 
+       itype_spubc                         1                  1        I 
+       nfi_spubc2                         10                 10        I 
+       itype_hdiff                         2                  2        I 
+       l_diff_Smag                         T                  T        L 
+       l_diff_cold_pools                   T                  F        L 
+       thresh_cold_pool               0.1000            10.0000        R 
+       hd_corr_u_bd                   0.7500             0.2500        R 
+       hd_corr_t_bd                   0.7000             0.0000        R 
+       hd_corr_trcr_bd                0.0020             0.0000        R 
+       hd_corr_p_bd                   0.7300             0.0000        R 
+       hd_corr_u_in                   0.0010             0.2500        R 
+       hd_corr_t_in                   0.0030             0.0000        R 
+       hd_corr_trcr_in                0.0020             0.0000        R 
+       hd_corr_p_in                   0.0040             0.0000        R 
+       hd_dhmax                     250.0000           250.0000        R 
+       xkd                            0.1000             0.1000        R 
+       divdamp_slope                 20.0000            20.0000        R 
+       eps_si                         0.0000             0.0000        R 
+       itype_fast_waves                    2                  2        I 
+       lspecnudge                          F                  F        L 
+  
+  
+0     NAMELIST:  phyctl
+      -----------------
+  
+      Variable      Actual Value      Default Value      Format
+       lgsp                    T                  T        L 
+       ldiniprec               F                  F        L 
+       lrad                    T                  T        L 
+       itype_aerosol           1                  1        I 
+       lemiss                  F                  F        L 
+       lforest                 T                  T        L 
+       ltur                    T                  T        L 
+       l3dturb                 F                  F        L 
+       l3dturb_metr            F                  T        L 
+       lprog_tke               F                  F        L 
+       limpltkediff            T                  T        L 
+       lconv                   T                  T        L 
+       itype_conv              3                  0        I 
+       lconv_inst              F                  F        L 
+       lconv_clo               F                  F        L 
+       lsoil                   T                  T        L 
+       lseaice                 F                  T        L 
+       llake                   F                  F        L 
+       lsso                    F                  T        L 
+       lmelt                   T                  T        L 
+       lmelt_var               T                  T        L 
+       lmulti_layer            T                  T        L 
+       ke_soil                 7                  7        I 
+         Main levels of the soil layers
+                           (m)           (cm)
+              0:                          0
+              1:         0.0050           1
+              2:         0.0200           2
+              3:         0.0600           6
+              4:         0.1800          18
+              5:         0.5400          54
+              6:         1.6200         162
+              7:         4.8600         486
+              8:        14.5800        1458
+       czbot_w_so         2.5000             2.5000        R 
+       lmulti_snow             F                  F        L 
+       ke_snow                 2                  2        I 
+       itype_heatcond          1                  1        I 
+       itype_hydbound          1                  1        I 
+       itype_hydcond           0                  0        I 
+       itype_root              1                  1        I 
+       lstomata                F                  F        L 
+       ltkesso                 F                  F        L 
+       ltkecon                 F                  F        L 
+       lexpcor                 F                  F        L 
+       ltmpcor                 F                  F        L 
+       lprfcor                 F                  F        L 
+       lnonloc                 F                  F        L 
+       lcpfluc                 F                  F        L 
+       lconf_avg               T                  T        L 
+       lradf_avg               F                  F        L 
+       lcape                   F                  F        L 
+       lctke                   F                  F        L 
+       hincrad            0.1667             1.0000        R 
+       nincrad                30                  0        I 
+       nradcoarse              1                  1        I 
+       ninctura                1                  1        I 
+       nincconv                4                  4        I 
+       nincsso                 5                  5        I 
+       itype_trvg              2                  2        I 
+       itype_evsl              2                  2        I 
+       itype_gscp              4                  3        I 
+       itype_sher              1                  1        I 
+       itype_wcld              2                  2        I 
+       itype_tran              2                  2        I 
+       itype_turb              3                  3        I 
+       itype_synd              2                  2        I 
+       imode_tran              1                  1        I 
+       imode_turb              1                  1        I 
+       ico2_rad                0                  0        I 
+       iy_co2_stab          2001               2001        I 
+       lco2_stab               F                  F        L 
+       icldm_rad               4                  4        I 
+       icldm_tran              0                  0        I 
+       icldm_turb              2                  2        I 
+       nlgw                    2                  2        I 
+       lradtopo                F                  F        L 
+       nhori                  24                 24        I 
+       itype_albedo            1                  1        I 
+  
+  
+0     NAMELIST:  diactl
+      -----------------
+  
+      Grid point calculations:
+      Variable      Actual Value      Default Value      Format
+       lgpshort     F                  F                   L 
+       lgplong      T                  F                   L 
+       lgpspec      F                  F                   L 
+       n0gp                    0                  0        I 
+       nincgp                180         2147483647        I 
+       h0gp                 0.00               0.00        R 
+       hincgp               1.00               0.00        R 
+  
+       Selected grid points:
+       Nr.:    i-index   j-index
+         1         5         5         -         -   --------------------          
+         2        37         5         -         -   --------------------          
+         3        19        14         -         -   --------------------          
+         4         5        23         -         -   --------------------          
+         5        34        23         -         -   --------------------          
+  
+      Mean values:
+      Variable      Actual Value      Default Value      Format
+       n0meanval               0                  0        I 
+       nincmeanval             1                 10        I 
+  
+      Volume or ar
+       l_integrals             F                  F        L 
+       imin_integ              4                  4        I 
+       imax_integ             36                 36        I 
+       jmin_integ              4                  4        I 
+       jmax_integ             25                 25        I 
+       kmin_integ              1                  1        I 
+       kmax_integ             80                 80        I 
+       itype_diag_t2           1                  1        I 
+       itype_diag_gu           2                  1        I 
+  
+      Testsuite Output: 
+       ltestsuite              F                  F        L 
+  
+      0     NAMELIST:  ioctl
+            ----------------
+  
+      Variable      Actual Value      Default Value      Format
+       nincwait               90                  0        I 
+       nmaxwait              300                  0        I 
+       nsma_stat               0                  0        I 
+       nvers                 907                  1        I 
+       nlocaldefnr            -1                 -1        I 
+       ncenter               215                 78        I 
+       nsubcenter            255                255        I 
+       ngribout                0                  1        I 
+       start restart          12                 12        I 
+       stop  restart           0                  0        I 
+       incr. restart          12                 12        I 
+       ytunit_restarf                  f                  C*1
+       ydir_restart          
+       itype_gather            2                  1        I 
+       num_gribtabs           12                 12        I 
+       lst_gribtabs            2                  2        I 
+       lst_gribtabs          201                201        I 
+       lst_gribtabs          202                202        I 
+       lst_gribtabs          203                203        I 
+       lst_gribtabs          204                204        I 
+       lst_gribtabs          205                205        I 
+       lst_gribtabs          241                241        I 
+       lst_gribtabs          242                242        I 
+       lst_gribtabs          243                243        I 
+       lst_gribtabs1         244                244        I 
+       lst_gribtabs1         250                250        I 
+       lst_gribtabs1         245                245        I 
+       ytrans_in (C*250) 
+       ytrans_out (C*250)
+       ymode_read   r                  r                  C*3
+       ymode_write  wgf                w                  C*3
+       yform_read   grb1               grb1               C*4
+       yncglob_institution   -
+       yncglob_title         -
+       yncglob_source        -
+       yncglob_project_id    -
+       yncglob_experiment_id -
+       yncglob_contact       -
+       yncglob_references    -
+       ncglob_realiz        -999               -999        I 
+       lasync_io               F                  F        L 
+       lprefetch_io            F                  F        L 
+       ldwd_grib_use           F                  T        L 
+       l_ke_in_gds             T                  T        L 
+       llockfiles              F                  F        L 
+       lbdclim                 F                  F        L 
+       lbdsst                  F                  F        L 
+  
+  
+0     NAMELIST:  gribin
+      -----------------
+  
+Variables for initial data
+       Variable     Actual Value      Default Value      Format
+       ydirini (C*250)   ./input/
+       nlgw_ini                2                  2        I 
+       lchkini                 T                  F        L 
+       ydirhhl (C*250)   
+       ynamhhl (C* 50)   
+       lbdana                  F                  F        L 
+       lana_qi                 T                  F        L 
+       llb_qi                  T                  F        L 
+       lana_qr_qs              T                  F        L 
+       llb_qr_qs               T                  F        L 
+       lana_qg                 T                  F        L 
+       llb_qg                  F                  F        L 
+       lana_rho_snow           T                  F        L 
+       lan_t_so0               T                  F        L 
+       lan_t_snow              T                  F        L 
+       lan_t_cl                T                  F        L 
+       lan_w_snow              T                  F        L 
+       lan_w_i                 T                  F        L 
+       lan_w_so                T                  F        L 
+       lan_w_cl                T                  F        L 
+       lan_vio3                T                  F        L 
+       lan_hmo3                T                  F        L 
+       lan_plcov               T                  F        L 
+       lan_lai                 T                  F        L 
+       lan_rootdp              T                  F        L 
+       lan_rho_snow            T                  F        L 
+  
+       ydirbd  (C*250)   ./input/
+       ytunitbd     f                  f                  C* 1
+       nlgw_bd                 2                  2        I 
+       hincbound          1.0000             1.0000        R 
+       newbcdt               540                540        I 
+       hnewbcdt           3.0000             0.0000        R 
+       newbc                   0                  0        I 
+       nincboufac              1                  1        I 
+       lchkbd                  T                  F        L 
+       lbd_frame               F                  F        L 
+       npstrframe              8                  8        I 
+       levbotnoframe           0                  0        I 
+  
+  
+0    NAMELIST: artifctl
+     ------------------
+  
+Variables for idealized simulations
+       Variable     Actual Value      Default Value      Format
+       ldebug_artif            T                  F        L 
+       idbg_artif_le           2                  0        I 
+       ivctype                 4                  2        I 
+       irefatm                 2                  2        I 
+       p0sl            100000.00          100000.00        R 
+       t0sl             300.0000           288.1500        R 
+       dt0lp             42.0000            42.0000        R 
+       delta_t           75.0000            75.0000        R 
+       h_scal           10000.00           10000.00        R 
+       bvref              0.0100             0.0100        R 
+       vcflat         11000.0000         11000.0000        R 
+       zz_top         22000.0000         22000.0000        R 
+       exp_galchen        2.6000             2.6000        R 
+       zspacing_type                                       C 
+                    vcoordvec
+                    galchen
+       nfltvc                100                100        I 
+       svc1           10000.0000          8000.0000        R 
+       svc2            3300.0000          5000.0000        R 
+       linitw_followeta                  T                  F        L 
+       href_oro         500.0000             0.0000        R 
+       linit_realoro                     F                  F        L 
+       i_shift_realo           0                  0        I 
+       j_shift_realo           0                  0        I 
+       orofile                                             C 
+                    dummy.dat
+                    noname.dat
+       z0file                                              C 
+                    dummy.dat
+                    noname.dat
+       frlandfile                                          C 
+                    dummy.dat
+                    noname.dat
+       soiltypefile                                        C 
+                    dummy.dat
+                    noname.dat
+       plcovfile                                           C 
+                    dummy.dat
+                    noname.dat
+       laifile                                             C 
+                    dummy.dat
+                    noname.dat
+       rootdpfile                                          C 
+                    dummy.dat
+                    noname.dat
+       forefile                                            C 
+                    dummy.dat
+                    noname.dat
+       fordfile                                            C 
+                    dummy.dat
+                    noname.dat
+       ticefile                                            C 
+                    dummy.dat
+                    noname.dat
+       hicefile                                            C 
+                    dummy.dat
+                    noname.dat
+       ssostdhfile                                         C 
+                    dummy.dat
+                    noname.dat
+       ssogammafile                                        C 
+                    dummy.dat
+                    noname.dat
+       ssothetafile                                        C 
+                    dummy.dat
+                    noname.dat
+       ssosigmafile                                        C 
+                    dummy.dat
+                    noname.dat
+       rasofile                                            C 
+                    
+                    noname.dat
+       itype_artifpr           2                  2        I 
+       itype_anaprof           3                  2        I 
+       itype_anaprof           2                  3        I 
+       tkvhfix          300.0000           300.0000        R 
+       tkhhfix          300.0000           300.0000        R 
+       tkvmfix          300.0000           300.0000        R 
+       tkhmfix          300.0000           300.0000        R 
+       lnosurffluxes           F                  F        L 
+       lnosurffluxes           F                  F        L 
+       nlayers_poly            3                  3        I 
+       p_base_poly   100000.0000        100000.0000        R 
+       u_infty            5.0000            20.0000        R 
+       href_wk         3000.0000          3000.0000        R 
+       hmin_wk            0.0000             0.0000        R 
+       p_base_wk     100000.0000        100000.0000        R 
+       nlayers_linwi           3                  2        I 
+       h_tropo_wk     12000.0000         12000.0000        R 
+       theta_0_wk       300.0000           300.0000        R 
+       theta_tropo_w    343.0000           343.0000        R 
+       t_tropo_wk       213.0000          -999.9900        R 
+       expo_theta_wk      1.2500             1.2500        R 
+       expo_relhum_w      1.2500             1.2500        R 
+       rh_min_wk          0.2500             0.2500        R 
+       rh_max_wk          1.0000             1.0000        R 
+       qv_max_wk          0.0140             0.0120        R 
+       itype_topo              1                  1        I 
+       itype_soil_c            1                  1        I 
+       z0_c               0.0100             0.1000        R 
+       fr_land_c          1.0000             1.0000        R 
+       soiltyp_c          3.0000             3.0000        R 
+       plcov_c            0.6000             0.6000        R 
+       lai_c              3.0000             3.0000        R 
+       rootdp_c           0.7000             0.7000        R 
+       for_e_c            0.2000             0.2000        R 
+       for_d_c            0.2000             0.2000        R 
+       t_soil_c          -1.0000            -1.0000        R 
+       t_snow_c          -1.0000            -1.0000        R 
+       wf_soil_c          0.3000             0.0000        R 
+       w_i_c              0.0000             0.0000        R 
+       w_snow_c           0.0000             0.0000        R 
+       h_ice_c            0.1000             0.1000        R 
+       t_ice_c          270.0000           270.0000        R 
+       ladd_noise_t            F                  F        L 
+       hadd_noise         0.0000             0.0000        R 
+       dT_noise           0.0200             0.0200        R 
+       dW_noise           0.0200             0.0200        R 
+       iseed_noise_t         606                606        I 
+       iseed_noise_w         607                607        I 
+       lps_from_file           F                  F        L 
+       rasofile_t_is           F                  F        L 
+       p_base_nconst 100000.0000        100000.0000        R 
+       theta0_base_n    300.0000           300.0000        R 
+       nlayers_ncons           3                  3        I 
+       itype_soil_tw           1                  1        I 
+       tsoilfile                                           C 
+                    dummy.dat
+                    noname.dat
+       tsnowfile                                           C 
+                    dummy.dat
+                    noname.dat
+       wfsoilfile                                          C 
+                    dummy.dat
+                    noname.dat
+       wsnowfile                                           C 
+                    dummy.dat
+                    noname.dat
+       wifile                                              C 
+                    dummy.dat
+                    noname.dat
+       t_surf_c          -1.0000            -1.0000        R 
+       lsensiflux_fi           F                  F        L 
+       llatentflux_f           F                  F        L 
+       sensiflux_c      300.0000             0.0000        R 
+       latentflux_Lz      0.4000             0.4000        R 
+       H0_rel_noise       0.0500             0.0000        R 
+       iseed_noise_H         608                608        I 
+       vcoordvec    (  1)  22000.0000     -999.9900        R 
+       vcoordvec    (  2)  21187.5200     -999.9900        R 
+       vcoordvec    (  3)  20396.2500     -999.9900        R 
+       vcoordvec    (  4)  19625.8900     -999.9900        R 
+       vcoordvec    (  5)  18876.1300     -999.9900        R 
+       vcoordvec    (  6)  18146.6800     -999.9900        R 
+       vcoordvec    (  7)  17437.2200     -999.9900        R 
+       vcoordvec    (  8)  16747.4500     -999.9900        R 
+       vcoordvec    (  9)  16077.0800     -999.9900        R 
+       vcoordvec    ( 10)  15425.8000     -999.9900        R 
+       vcoordvec    ( 11)  14793.3000     -999.9900        R 
+       vcoordvec    ( 12)  14179.2900     -999.9900        R 
+       vcoordvec    ( 13)  13583.4700     -999.9900        R 
+       vcoordvec    ( 14)  13005.5300     -999.9900        R 
+       vcoordvec    ( 15)  12445.1900     -999.9900        R 
+       vcoordvec    ( 16)  11902.1300     -999.9900        R 
+       vcoordvec    ( 17)  11376.0600     -999.9900        R 
+       vcoordvec    ( 18)  10866.6900     -999.9900        R 
+       vcoordvec    ( 19)  10373.7100     -999.9900        R 
+       vcoordvec    ( 20)   9896.8400     -999.9900        R 
+       vcoordvec    ( 21)   9435.7700     -999.9900        R 
+       vcoordvec    ( 22)   8990.2100     -999.9900        R 
+       vcoordvec    ( 23)   8559.8700     -999.9900        R 
+       vcoordvec    ( 24)   8144.4500     -999.9900        R 
+       vcoordvec    ( 25)   7743.6600     -999.9900        R 
+       vcoordvec    ( 26)   7357.2100     -999.9900        R 
+       vcoordvec    ( 27)   6984.8000     -999.9900        R 
+       vcoordvec    ( 28)   6626.1500     -999.9900        R 
+       vcoordvec    ( 29)   6280.9700     -999.9900        R 
+       vcoordvec    ( 30)   5948.9600     -999.9900        R 
+       vcoordvec    ( 31)   5629.8300     -999.9900        R 
+       vcoordvec    ( 32)   5323.3100     -999.9900        R 
+       vcoordvec    ( 33)   5029.0900     -999.9900        R 
+       vcoordvec    ( 34)   4746.9100     -999.9900        R 
+       vcoordvec    ( 35)   4476.4600     -999.9900        R 
+       vcoordvec    ( 36)   4217.4600     -999.9900        R 
+       vcoordvec    ( 37)   3969.6400     -999.9900        R 
+       vcoordvec    ( 38)   3732.7000     -999.9900        R 
+       vcoordvec    ( 39)   3506.3700     -999.9900        R 
+       vcoordvec    ( 40)   3290.3600     -999.9900        R 
+       vcoordvec    ( 41)   3084.4000     -999.9900        R 
+       vcoordvec    ( 42)   2888.2000     -999.9900        R 
+       vcoordvec    ( 43)   2701.4800     -999.9900        R 
+       vcoordvec    ( 44)   2523.9600     -999.9900        R 
+       vcoordvec    ( 45)   2355.3800     -999.9900        R 
+       vcoordvec    ( 46)   2195.4500     -999.9900        R 
+       vcoordvec    ( 47)   2043.9000     -999.9900        R 
+       vcoordvec    ( 48)   1900.4500     -999.9900        R 
+       vcoordvec    ( 49)   1764.8400     -999.9900        R 
+       vcoordvec    ( 50)   1636.7800     -999.9900        R 
+       vcoordvec    ( 51)   1516.0200     -999.9900        R 
+       vcoordvec    ( 52)   1402.2700     -999.9900        R 
+       vcoordvec    ( 53)   1295.2800     -999.9900        R 
+       vcoordvec    ( 54)   1194.7700     -999.9900        R 
+       vcoordvec    ( 55)   1100.4800     -999.9900        R 
+       vcoordvec    ( 56)   1012.1400     -999.9900        R 
+       vcoordvec    ( 57)    929.4900     -999.9900        R 
+       vcoordvec    ( 58)    852.2800     -999.9900        R 
+       vcoordvec    ( 59)    780.2300     -999.9900        R 
+       vcoordvec    ( 60)    713.0900     -999.9900        R 
+       vcoordvec    ( 61)    650.6100     -999.9900        R 
+       vcoordvec    ( 62)    592.5200     -999.9900        R 
+       vcoordvec    ( 63)    538.5700     -999.9900        R 
+       vcoordvec    ( 64)    488.5200     -999.9900        R 
+       vcoordvec    ( 65)    442.1100     -999.9900        R 
+       vcoordvec    ( 66)    399.0900     -999.9900        R 
+       vcoordvec    ( 67)    359.2100     -999.9900        R 
+       vcoordvec    ( 68)    322.2400     -999.9900        R 
+       vcoordvec    ( 69)    287.9300     -999.9900        R 
+       vcoordvec    ( 70)    256.0400     -999.9900        R 
+       vcoordvec    ( 71)    226.3300     -999.9900        R 
+       vcoordvec    ( 72)    198.5700     -999.9900        R 
+       vcoordvec    ( 73)    172.5400     -999.9900        R 
+       vcoordvec    ( 74)    148.0000     -999.9900        R 
+       vcoordvec    ( 75)    124.7300     -999.9900        R 
+       vcoordvec    ( 76)    102.5100     -999.9900        R 
+       vcoordvec    ( 77)     81.1300     -999.9900        R 
+       vcoordvec    ( 78)     60.3900     -999.9900        R 
+       vcoordvec    ( 79)     40.0700     -999.9900        R 
+       vcoordvec    ( 80)     20.0000     -999.9900        R 
+       vcoordvec    ( 81)      0.0000     -999.9900        R 
+       lhill                  (  1)            T            F        L 
+       lhill                  (  2)            T            F        L 
+       lhill                  (  3)            T            F        L 
+       lhill_2d               (  1)            T            T        L 
+       lhill_2d               (  2)            T            T        L 
+       lhill_2d               (  3)            T            T        L 
+       hill_type              (  1)                                  C 
+                                    gauss
+                                    gauss
+       hill_type              (  2)                                  C 
+                                    gauss
+                                    gauss
+       hill_type              (  3)                                  C 
+                                    gauss
+                                    gauss
+       hill_i                 (  1)      80.5000      20.0000        R 
+       hill_i                 (  2)      60.5000      20.0000        R 
+       hill_i                 (  3)     100.5000      20.0000        R 
+       hill_j                 (  1)      80.5000      14.5000        R 
+       hill_j                 (  2)      80.5000      14.5000        R 
+       hill_j                 (  3)      80.5000      14.5000        R 
+       hill_width_x           (  1)   10000.0000    5000.0000        R 
+       hill_width_x           (  2)   20000.0000    5000.0000        R 
+       hill_width_x           (  3)   15000.0000    5000.0000        R 
+       hill_width_y           (  1)  300000.0000    5000.0000        R 
+       hill_width_y           (  2)  300000.0000    5000.0000        R 
+       hill_width_y           (  3)  300000.0000    5000.0000        R 
+       hillsideradius_y       (  1)   10000.0000    5000.0000        R 
+       hillsideradius_y       (  2)   10000.0000    5000.0000        R 
+       hillsideradius_y       (  3)   10000.0000    5000.0000        R 
+       hillheight             (  1)     500.0000    1000.0000        R 
+       hillheight             (  2)    -500.0000    1000.0000        R 
+       hillheight             (  3)     750.0000    1000.0000        R 
+       hill_rotangle          (  1)       0.0000       0.0000        R 
+       hill_rotangle          (  2)       0.0000       0.0000        R 
+       hill_rotangle          (  3)       0.0000       0.0000        R 
+       zhillcutfact           (  1)       0.0200       0.0000        R 
+       zhillcutfact           (  2)       0.0200       0.0000        R 
+       zhillcutfact           (  3)       0.0200       0.0000        R 
+       hillasym_x             (  1)       1.0000       1.0000        R 
+       hillasym_x             (  2)       1.0000       1.0000        R 
+       hillasym_x             (  3)       2.0000       1.0000        R 
+       hillasym_y             (  1)       1.0000       1.0000        R 
+       hillasym_y             (  2)       1.0000       1.0000        R 
+       hillasym_y             (  3)       1.0000       1.0000        R 
+       hill_combineaction     (  1)        1            1            I 
+       hill_combineaction     (  2)        1            1            I 
+       hill_combineaction     (  3)        1            1            I 
+       hcond_on           0.0000             0.0000        R 
+       ltempdist              (  1)            T            F        L 
+       ctype_tempdist         (  1)                                  C 
+                                    cos
+                                    cos
+       htempdist              (  1)       0.0000       0.0000        R 
+       bub_centi              (  1)      51.0000      20.0000        R 
+       bub_centj              (  1)      80.5000      14.5000        R 
+       bub_centz              (  1)    1400.0000    1400.0000        R 
+       bub_timespan           (  1)        1          100            I 
+       bub_radx               (  1)   10000.0000   10000.0000        R 
+       bub_rady               (  1)   10000.0000   10000.0000        R 
+       bub_radz               (  1)    1400.0000    1400.0000        R 
+       bub_rotangle           (  1)       0.0000       0.0000        R 
+       bub_dT                 (  1)       3.0000       3.0000        R 
+       ladd_bubblenoise_t     (  1)            T            F        L 
+       bub_dT_bubblenoise     (  1)       0.1000       0.1000        R 
+       bub_zi_mcnider         (  1)    4000.0000    4000.0000        R 
+       bub_zmax_mcnider       (  1)    6000.0000    6000.0000        R 
+       bub_h0_mcnider         (  1)     600.0000     600.0000        R 
+       bub_heatingrate        (  1)       0.0300       0.0050        R 
+       bub_centk              (  1)        5            5            I 
+       lbub_rhconst           (  1)            F            F        L 
+       h_poly                 (  1)       0.0000       0.0000        R 
+       h_poly                 (  2)    2000.0000    2000.0000        R 
+       h_poly                 (  3)   12000.0000   11000.0000        R 
+       t_poly                 (  1)     293.1600     288.1600        R 
+       t_poly                 (  2)     273.6600     275.1600        R 
+       t_poly                 (  3)     213.6600     216.6600        R 
+       tgr_poly               (  1)  9.75000E-03  9.50000E-03        R 
+       tgr_poly               (  2)  6.00000E-03  6.50000E-03        R 
+       tgr_poly               (  3)  0.00000E+00  0.00000E+00        R 
+       rh_poly                (  1)       0.5000       0.0000        R 
+       rh_poly                (  2)       0.9000       0.0000        R 
+       rh_poly                (  3)       0.3000       0.0000        R 
+       rhgr_poly              (  1) -2.00000E-04 -0.00000E+00        R 
+       rhgr_poly              (  2)  6.00000E-05  0.00000E+00        R 
+       rhgr_poly              (  3)  0.00000E+00  0.00000E+00        R 
+       h_linwind              (  1)       0.0000       0.0000        R 
+       h_linwind              (  2)    1500.0000    2500.0000        R 
+       h_linwind              (  3)   12000.0000    -999.9900        R 
+       u_linwind              (  1)      10.0000       0.0000        R 
+       u_linwind              (  2)      15.0000      20.0000        R 
+       u_linwind              (  3)      20.0000       0.0000        R 
+       ugr_linwind            (  1)  0.00000E+00  8.00000E-03        R 
+       ugr_linwind            (  2)  0.00000E+00  0.00000E+00        R 
+       ugr_linwind            (  3)  0.00000E+00  0.00000E+00        R 
+       h_nconst               (  1)       0.0000       0.0000        R 
+       h_nconst               (  2)    1500.0000    1500.0000        R 
+       h_nconst               (  3)   10000.0000   12000.0000        R 
+       N_nconst               (  1)  1.00000E-03  1.00000E-03        R 
+       N_nconst               (  2)  1.00000E-02  1.00000E-02        R 
+       N_nconst               (  3)  1.00000E-02  2.00000E-02        R 
+       rh_nconst              (  1)  5.00000E-01  0.00000E+00        R 
+       rh_nconst              (  2)  8.00000E-01  0.00000E+00        R 
+       rh_nconst              (  3)  3.00000E-01  0.00000E+00        R 
+       rhgr_nconst            (  1)  0.00000E+00  0.00000E+00        R 
+       rhgr_nconst            (  2)  0.00000E+00  0.00000E+00        R 
+       rhgr_nconst            (  3)  0.00000E+00  0.00000E+00        R 
+  
+Variables for initial input
+       yvarini(  1) HSURF                                C10
+       yvarini(  2) FR_LAND                              C10
+       yvarini(  3) Z0                                   C10
+       yvarini(  4) SOILTYP                              C10
+       yvarini(  5) PLCOV                                C10
+       yvarini(  6) LAI                                  C10
+       yvarini(  7) ROOTDP                               C10
+       yvarini(  8) VIO3                                 C10
+       yvarini(  9) HMO3                                 C10
+       yvarini( 10) U                                    C10
+       yvarini( 11) V                                    C10
+       yvarini( 12) W                                    C10
+       yvarini( 13) T                                    C10
+       yvarini( 14) PP                                   C10
+       yvarini( 15) T_SNOW                               C10
+       yvarini( 16) W_I                                  C10
+       yvarini( 17) QV_S                                 C10
+       yvarini( 18) W_SNOW                               C10
+       yvarini( 19) T_S                                  C10
+       yvarini( 20) QV                                   C10
+       yvarini( 21) QC                                   C10
+       yvarini( 22) QI                                   C10
+       yvarini( 23) QG                                   C10
+       yvarini( 24) QR                                   C10
+       yvarini( 25) QS                                   C10
+       yvarini( 26) T_SO                                 C10
+       yvarini( 27) W_SO                                 C10
+       yvarini( 28) FRESHSNW                             C10
+       yvarini( 29) FOR_E                                C10
+       yvarini( 30) FOR_D                                C10
+       yvarini( 31) RHO_SNOW                             C10
+  
+Variables for boundary input
+       yvarbd(  1)  U                                    C10
+       yvarbd(  2)  V                                    C10
+       yvarbd(  3)  T                                    C10
+       yvarbd(  4)  PP                                   C10
+       yvarbd(  5)  T_SNOW                               C10
+       yvarbd(  6)  W_SNOW                               C10
+       yvarbd(  7)  QV_S                                 C10
+       yvarbd(  8)  QV                                   C10
+       yvarbd(  9)  QC                                   C10
+       yvarbd( 10)  QI                                   C10
+       yvarbd( 11)  QR                                   C10
+       yvarbd( 12)  QS                                   C10
+  
+    
+   Splitting of Topography for SLEVE coordinate:
+    nflt =   100 Applications of Filter
+    Maxima of Topography Parts:
+    Max of Full Topography        hsurf          :  500.00000
+    Max of Large-Scale Topography hsurfs(:,:,1)  :  500.00000
+    Max of Small-Scale Topography hsurfs(:,:,2)  :    0.00420
+         
+   Invertibility parameter for SLEVE coordinate: gammavc =    0.93754
+         
+0     Vertical coordinate: type 4 (SLEVE2 coordinate)
+ 
+     k      Z(k)        P0(k) 
+     1  22000.0000     51.8865
+     2  21187.5200     58.4314
+     3  20396.2500     65.5748
+     4  19625.8900     73.3407
+     5  18876.1300     81.7511
+     6  18146.6800     90.8242
+     7  17437.2200    100.5757
+     8  16747.4500    111.0170
+     9  16077.0800    122.1556
+    10  15425.8000    133.9948
+    11  14793.3000    146.5339
+    12  14179.2900    159.7670
+    13  13583.4700    173.6838
+    14  13005.5300    188.2698
+    15  12445.1900    203.5050
+    16  11902.1300    219.3660
+    17  11376.0600    235.8245
+    18  10866.6900    252.8480
+    19  10373.7100    270.4009
+    20   9896.8400    288.4431
+    21   9435.7700    306.9325
+    22   8990.2100    325.8237
+    23   8559.8700    345.0687
+    24   8144.4500    364.6185
+    25   7743.6600    384.4218
+    26   7357.2100    404.4266
+    27   6984.8000    424.5809
+    28   6626.1500    444.8312
+    29   6280.9700    465.1253
+    30   5948.9600    485.4119
+    31   5629.8300    505.6404
+    32   5323.3100    525.7603
+    33   5029.0900    545.7251
+    34   4746.9100    565.4874
+    35   4476.4600    585.0050
+    36   4217.4600    604.2364
+    37   3969.6400    623.1419
+    38   3732.7000    641.6865
+    39   3506.3700    659.8361
+    40   3290.3600    677.5610
+    41   3084.4000    694.8331
+    42   2888.2000    711.6285
+    43   2701.4800    727.9262
+    44   2523.9600    743.7079
+    45   2355.3800    758.9564
+    46   2195.4500    773.6606
+    47   2043.9000    787.8100
+    48   1900.4500    801.3983
+    49   1764.8400    814.4197
+    50   1636.7800    826.8742
+    51   1516.0200    838.7602
+    52   1402.2700    850.0827
+    53   1295.2800    860.8449
+    54   1194.7700    871.0552
+    55   1100.4800    880.7221
+    56   1012.1400    889.8570
+    57    929.4900    898.4721
+    58    852.2800    906.5803
+    59    780.2300    914.1993
+    60    713.0900    921.3449
+    61    650.6100    928.0344
+    62    592.5200    934.2884
+    63    538.5700    940.1266
+    64    488.5200    945.5686
+    65    442.1100    950.6370
+    66    399.0900    955.3543
+    67    359.2100    959.7438
+    68    322.2400    963.8272
+    69    287.9300    967.6290
+    70    256.0400    971.1733
+    71    226.3300    974.4844
+    72    198.5700    977.5862
+    73    172.5400    980.5017
+    74    148.0000    983.2566
+    75    124.7300    985.8745
+    76    102.5100    988.3794
+    77     81.1300    990.7943
+    78     60.3900    993.1413
+    79     40.0700    995.4450
+    80     20.0000    997.7245
+    81      0.0000   1000.0000
+ 
+   Boundary for change from z to terrain-following: vcflat = 11000.0000
+   Half-level index where levels become flat: k =  17
+ 
+ Exponential profile with asymptotic isothermal stratosphere 
+ 
+ Values of the Reference Atmosphere: 
+   Pressure at Sea-Level:                  1000.0000
+   Temperature at Sea-Level:                 26.8500
+   Temp. diff. sea-level-stratosph.:         75.0000
+  Scale height for temp. decrease:        10000.0000
+ 
+   Decay Rate for Large-Scale Topography: svc1 = 10000.0000
+   Decay Rate for Small-Scale Topography: svc2 =  3300.0000
+ Full-level index corresponding to specific pressure levels:
+   300 hPa: k =  20
+   400 hPa: k =  25
+   500 hPa: k =  30
+   800 hPa: k =  47
+   850 hPa: k =  51

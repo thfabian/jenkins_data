@@ -1,0 +1,172 @@
+&ARTIFCTL
+ldebug_artif = .true.,
+  idbg_artif_level = 2
+irefatm = 2,
+  p0sl = 1.0e5,     ! reference surface (z = 0.0 m) pressure [Pa]
+  t0sl = 300.0,     ! reference surface temperature [K]
+  dt0lp = 42.0,     ! logarithmic temperature gradient [K]
+  delta_t = 75.0,   ! temperature diff. surface - stratosphere [K]
+  h_scal = 10000.0, ! e-folding height of exponential adjustment to the stratosphere temp. [m]
+  bvref = 0.01,     ! constant Brund-Vaisala-frequency for irefatm=3 [1/s]
+ivctype = 4,
+  zspacing_type = 'vcoordvec', ! sub-type of coordinate spec.
+  exp_galchen = 2.6,        ! exponent in the Gal-Chen formula
+  vcflat = 11000.0,         ! height, above which coordinate levels become flat [m]
+  zz_top = 22000.0,         ! height of model top, if it has to be specified explicitly [m]
+  vcoordvec = 22000.00, 21187.52, 20396.25, 19625.89, 18876.13,
+              18146.68, 17437.22, 16747.45, 16077.08, 15425.80,
+              14793.30, 14179.29, 13583.47, 13005.53, 12445.19,
+              11902.13, 11376.06, 10866.69, 10373.71,  9896.84,
+               9435.77,  8990.21,  8559.87,  8144.45,  7743.66,
+               7357.21,  6984.80,  6626.15,  6280.97,  5948.96,
+               5629.83,  5323.31,  5029.09,  4746.91,  4476.46,
+               4217.46,  3969.64,  3732.70,  3506.37,  3290.36,
+               3084.40,  2888.20,  2701.48,  2523.96,  2355.38,
+               2195.45,  2043.90,  1900.45,  1764.84,  1636.78,
+               1516.02,  1402.27,  1295.28,  1194.77,  1100.48,
+               1012.14,   929.49,   852.28,   780.23,   713.09,
+                650.61,   592.52,   538.57,   488.52,   442.11,
+                399.09,   359.21,   322.24,   287.93,   256.04,
+                226.33,   198.57,   172.54,   148.00,   124.73,
+                102.51,    81.13,    60.39,    40.07,    20.00,
+                  0.00,     ! vert. coordinate vector (# = ke+1, max. 999 values)
+  nfltvc = 100,             ! number of filter appl. for SLEVE coordinate
+  svc1 =10000.0,            ! "coarser" length scale for SLEVE coordinate [m]
+  svc2 = 3300.0,            ! "fine" length scale for SLEVE coordinate [m]
+linit_realoro = .false.,
+  orofile = 'dummy.dat', 
+  i_shift_realoro = 0, 
+  j_shift_realoro = 0,
+  href_oro=500.0,
+itype_topo = 1, 
+  lhill = .true., .true., .true.,
+      lhill_2d = .true.,.true.,.true.,
+      hill_type = 'gauss','gauss','gauss',
+      hill_i = 80.5, 60.5, 100.5,
+      hill_j = 80.5, 80.5, 80.5,
+      hillheight = 500.0, -500.0, 750.0,
+      hill_rotangle = 0.0,0.0, 0.0,
+      zhillcutfact = 0.02, 0.02, 0.02, 
+      hill_combineaction = 1, 
+      hill_width_x = 10000.0, 20000.0, 15000.0,
+      hill_width_y = 300000.0, 300000.0, 300000.0, 
+      hillsideradius_y = 10000.0, 10000.0, 10000.0, 
+      hillasym_x = 1.0, 1.0, 2.0
+      hillasym_y = 1.0, 1.0, 1.0,
+t_surf_c = -1.0,   ! baseline t_s (if < 0, the atmosphere temperature at the surface is used)
+itype_soil_c = 1, 
+  z0_c      = 0.01,        ! z_0 in m
+  fr_land_c = 1.0,         ! land fraction, dimensionless
+  soiltyp_c = 3.0,         ! soiltype, dimensionless
+  plcov_c   = 0.6,         ! plant cover, dimensionless
+  lai_c     = 3.0,         ! LAI, dimensionless
+  rootdp_c  = 0.7,         ! root depth in m
+  for_e_c   = 0.2,         ! area fraction of evergreen forests
+  for_d_c   = 0.2,         ! area fraction of decidious forests
+  h_ice_c   = 0.1,         ! ice thickness in m
+  t_ice_c   = 270.0,       ! T at the snow-ice or air-ice interf. in K
+  z0file       = 'dummy.dat',  ! z_0 in m
+  frlandfile   = 'dummy.dat',  ! land fraction, dimensionless
+  soiltypefile = 'dummy.dat',  ! soiltype, dimensionlessx
+  plcovfile    = 'dummy.dat',  ! plant cover, dimensionless
+  laifile      = 'dummy.dat',  ! LAI, dimensionless
+  rootdpfile   = 'dummy.dat',  ! root depth in m
+  forefile     = 'dummy.dat',  ! area fraction of evergreen forests
+  fordfile     = 'dummy.dat',  ! area fraction of decidious forests
+  hicefile     = 'dummy.dat',  ! ice thickness in m
+  ticefile     = 'dummy.dat',  ! T at the snow-ice or air-ice interf. in K
+  ssostdhfile  = 'dummy.dat',  ! std. dev. of sub-grid scale orography [m]
+  ssogammafile = 'dummy.dat',  ! anisotr. of sub-grid scale orography [-]
+  ssothetafile = 'dummy.dat',  ! angle betw. princ. axis of orogr. and E [rad]
+  ssosigmafile = 'dummy.dat',  ! mean slope of sub-grid scale orography [-]
+itype_soil_tw = 1, 
+  t_soil_c  = -1.0,     ! t_soil in K (if <0, t_s is taken instead)
+  wf_soil_c = 0.3,      ! soil water saturation, dimensionless (0 ... 1)
+  t_snow_c  = -1.0,     ! t_snow in K (if <0, t_s is taken instead)
+  w_snow_c  = 0.0,      ! snow water equivalent in m H2O
+  w_i_c     = 0.0,      ! interception storage on plants in m H2O
+  tsoilfile  = 'dummy.dat',   ! t_soil in K
+  wfsoilfile = 'dummy.dat',   ! soil water saturation, dimensionless (0 ... 1)
+  tsnowfile  = 'dummy.dat',   ! t_snow in K
+  wsnowfile  = 'dummy.dat',   ! snow water equivalent in m H2O
+  wifile     = 'dummy.dat',   ! interception storage on plants in m H2O
+itype_artifprofiles = 2, 
+  itype_anaprof_tqv = 3, 
+  itype_anaprof_uv = 2,
+  rasofile = '',
+  lps_from_file=.false.,
+  rasofile_t_is_theta = .false.,
+    hmin_wk = 0.0,
+    p_base_wk = 1.0e5,
+    h_tropo_wk = 12000.0,
+    theta_0_wk = 300.0,
+    theta_tropo_wk = 343.0,
+    t_tropo_wk = 213.0,
+    expo_theta_wk = 1.25,
+    expo_relhum_wk = 1.25,
+    rh_min_wk = 0.25,
+    rh_max_wk = 1.0,
+    qv_max_wk = 0.014, 
+    nlayers_poly = 3,
+    p_base_poly = 1.0e5,
+    h_poly = 0.0, 2000.0, 12000.,
+    t_poly = 293.16, 273.66, 213.66, 
+    tgr_poly = 0.00975, 0.006, 0.0, 
+    rh_poly = 0.5, 0.9, 0.3, 
+    rhgr_poly = -2.0e-4, 6.0e-5, 0.0,
+    nlayers_nconst = 3,
+    p_base_nconst = 1.0e5,
+    theta0_base_nconst = 300.0,
+    h_nconst = 0.0, 1500.0, 10000.,
+    N_nconst = 0.001, 0.01, 0.01, 
+    rh_nconst = 0.5, 0.8, 0.3, 
+    rhgr_nconst = 0.0, 0.0, 0.0,
+    href_wk = 3000.0, 
+    u_infty = 5.0,
+    nlayers_linwind = 3,
+    h_linwind = 0.0, 1500.0, 12000.0,
+    u_linwind = 10.0, 15.0, 20.0,
+    ugr_linwind = 0.0, 0.0, 0.0, 
+linitw_followeta = .true.,
+zo_boundary = 0.0, 
+  exponent_windprof_boundary = 0.25,
+tkvhfix = 300.0, 
+tkhhfix = 300.0, 
+tkvmfix = 300.0, 
+tkhmfix = 300.0,
+lsensiflux_fix = .false.,
+  sensiflux_c = 300.0,
+  llatentflux_fix = .false.,
+    latentflux_LzuS = 0.4,
+  H0_rel_noise = 0.05,
+  iseed_noise_H0 = 608,
+lnosurffluxes_m = .false.,
+lnosurffluxes_h = .false.,
+ltempdist = .true., .false., .false.,.false.,
+  ctype_tempdist = 'cos', 'cos-hrd', 'mcnider', 'hotspot',
+    htempdist = 0.0, 1.0,
+    bub_centi = 51.0, 45.5,
+    bub_centj = 80.5, 80.5,
+    bub_centz = 1400.0, 1400.0,
+    bub_centk = 5, 5,
+    bub_timespan = 1, 100,
+    bub_radx = 10000.0, 10000.0,
+    bub_rady = 10000.0, 10000.0, 
+    bub_radz = 1400.0, 1400.0,
+    bub_rotangle = 0.0, 0.0, 
+    bub_dT = 3.0, 3.0, 
+    bub_heatingrate = 0.03, 0.03
+    lbub_rhconst = .false., .true.,
+    ladd_bubblenoise_t = .true., .true.,
+      bub_dT_bubblenoise = 0.1, 0.1,
+    bub_zi_mcnider = 4000.0, 4000.0,
+    bub_zmax_mcnider = 6000.0, 6000.0,
+    bub_h0_mcnider = 600.0, 600.0,
+ladd_noise_t = .false.,
+  hadd_noise = 0.0,
+  dT_noise = 0.02,
+  iseed_noise_t = 606,
+  dW_noise = 0.02, 
+  iseed_noise_w = 607,
+hcond_on = 0.0,
+/

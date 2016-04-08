@@ -1,0 +1,18 @@
+&EPSCTL
+ iepsmem=0,
+ iepstot=0,
+ iepstyp=1,
+ itype_vtaper_rn=2,
+ itype_qxpert_rn=1,
+ itype_qxlim_rn=0,
+ npattern_rn=1,
+ hinc_rn=6,
+ dlat_rn=5.0,
+ dlon_rn=5.0,
+ stdv_rn=1.0,
+ range_rn=0.9,
+ lgauss_rn=.TRUE.,
+ lhorint_rn=.TRUE.,
+ ltimeint_rn=.TRUE.,
+/END
+
